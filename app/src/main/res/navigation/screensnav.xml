@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screensnav"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/avOne"
+        android:name="com.example.myapplication.Screens.AvOne"
+        android:label="fragment_av_one"
+        tools:layout="@layout/fragment_av_one" >
+        <action
+            android:id="@+id/action_avOne_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.myapplication.Screens.HomeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreen_to_avOne"
+            app:destination="@id/avOne" />
+        <action
+            android:id="@+id/action_homeScreen_to_cartScreen"
+            app:destination="@id/cartScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartScreen"
+        android:name="com.shuklansh.groceryapp.Screens.CartScreen"
+        android:label="fragment_cart_screen"
+        tools:layout="@layout/fragment_cart_screen" >
+        <action
+            android:id="@+id/action_cartScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+</navigation>
